@@ -1,13 +1,10 @@
-import Image from 'next/image'
+import Header from '@/components/header'
+import { ModeToggle } from '@/components/mode-toggle'
 
 export default function Home() {
   return (
     <>
-      <header>
-        <div>
-          Header Here!
-        </div>
-      </header>
+      <Header />
       <main>
         Main Here!
       </main>
