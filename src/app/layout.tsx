@@ -2,6 +2,8 @@ import './global.css'
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { inter } from '@/lib/fonts'
+import { ClerkProvider } from '@clerk/nextjs'
+import Header from '@/components/header'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,12 +16,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html >
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${inter.className}`}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Header />
+            {children}
+          </ThemeProvider>
+        </body>
+      </html >
+    </ClerkProvider>
   )
 }
