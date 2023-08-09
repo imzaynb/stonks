@@ -24,20 +24,25 @@ const Header = () => {
             </div>
             <div className="flex items-center">
                 {isSignedIn ? (
-                    <div className="mr-2">
-                        <UserButton />
-                    </div>
+                    <>
+                        <div className="mr-2">
+                            <UserButton />
+                        </div>
+                        <ModeToggle />
+                    </>
                 ) : (
-                    <div className="">
-                        <Button variant="link">
-                            <SignInButton />
-                        </Button>
-                        <Button variant="link">
-                            <SignUpButton />
-                        </Button>
-                    </div>
+                    <>
+                        <div className="mr-2">
+                            <Button variant="link">
+                                <SignInButton />
+                            </Button>
+                            <Button variant="link">
+                                <SignUpButton />
+                            </Button>
+                        </div>
+                        <ModeToggle />
+                    </>
                 )}
-                <ModeToggle />
             </div>
         </header>
     )
