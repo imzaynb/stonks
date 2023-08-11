@@ -26,7 +26,7 @@ const Header = () => {
                 {isSignedIn ? (
                     <>
                         <div className="mr-2">
-                            <UserButton />
+                            <UserButton afterSignOutUrl="/" />
                         </div>
                         <ModeToggle />
                     </>
