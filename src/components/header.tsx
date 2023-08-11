@@ -15,8 +15,19 @@ const Header = () => {
             <div className="flex items-center">
                 <Link href="/" className={`${mate_sc.className} scroll-m-20 pb-2 text-4xl font-semibold tracking-wide transition-colors first:mt-0`}>Stonks</Link>
                 {isSignedIn ? (
-                    <div>
-                        a bunch of links
+                    <div className="ml-2">
+                        <Button variant="link">
+                            <Link href="/quote">Quote</Link>
+                        </Button>
+                        <Button variant="link">
+                            <Link href="/buy">Buy</Link>
+                        </Button>
+                        <Button variant="link">
+                            <Link href="/sell">Sell</Link>
+                        </Button>
+                        <Button variant="link">
+                            <Link href="/history">History</Link>
+                        </Button>
                     </div>
                 ) : (
                     <></>

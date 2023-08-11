@@ -39,10 +39,8 @@ const StonksTable = () => {
 
     return (
         <Table>
-            <TableCaption>Data provided by
-                <Button variant="link">
-                    <a href="https://iexcloud.io/">IEX</a>
-                </Button>.
+            <TableCaption>
+                Table Caption here.
             </TableCaption>
             <TableHeader>
                 <TableRow>

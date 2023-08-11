@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { inter } from '@/lib/fonts'
 import { ClerkProvider } from '@clerk/nextjs'
 import Header from '@/components/header'
+import Footer from '@/components/footer'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,7 +22,12 @@ export default function RootLayout({
         <body className={`${inter.className}`}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Header />
+
             {children}
+
+            <div className='flex justify-center mt-4'>
+              <Footer />
+            </div>
           </ThemeProvider>
         </body>
       </html >
