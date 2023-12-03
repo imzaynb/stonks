@@ -1,7 +1,7 @@
-export default function HistoryPage() {
-    return (
-        <main>
+export default async function HistoryPage() {
+  return (
+    <main>
 
-        </main>
-    )
+    </main>
+  )
 }

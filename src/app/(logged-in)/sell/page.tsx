@@ -2,9 +2,9 @@ export default function SellPage() {
 
 
 
-    return (
-        <main>
+  return (
+    <main>
 
-        </main>
-    )
+    </main>
+  )
 }
